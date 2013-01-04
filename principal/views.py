@@ -48,9 +48,9 @@ def nueva_receta(request):
 		if formulario.is_valid():
 			formulario.save()
 			return HttpResponseRedirect('/recetas')
-		else: 
-			formulario=RecetaForm()
-		return render_to_response('recetaform.html',{'formulario':formulario}, context_instance=RequestContext(request))
+	else: 
+		formulario=RecetaForm()
+	return render_to_response('recetaform.html',{'formulario':formulario}, context_instance=RequestContext(request))
 
 def nuevo_comentario(request):
 	if request.method=='POST':
@@ -58,7 +58,7 @@ def nuevo_comentario(request):
 		if formulario.is_valid():
 			formulario.save()
 			return HttpResponseRedirect('/recetas')
-		else: 
+	else: 
 			formulario=ComentarioForm()
-		return render_to_response('comentarioform.html',{'formulario':formulario}, context_instance=RequestContext(request))
+	return render_to_response('comentarioform.html',{'formulario':formulario}, context_instance=RequestContext(request))
 
