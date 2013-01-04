@@ -38,9 +38,9 @@ def contacto(request):
 			correo=EmailMessage(titulo, contenido, to=['destinatario@gmail.com'])
 			correo.send()
 			return HttpResponseRedirect('/')
-		else: 
+	else: 
 			formulario=ContactoForm()
-		return render_to_response('contactoform.html',{'formulario':formulario}, context_instance=RequestContext(request))
+	return render_to_response('contactoform.html',{'formulario':formulario}, context_instance=RequestContext(request))
 
 def nueva_receta(request):
 	if request.method=='POST':
