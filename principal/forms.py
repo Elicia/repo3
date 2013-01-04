@@ -1,4 +1,4 @@
-#encoding:utf-8
+#HOLA#encoding:utf-8
 from principal.models import Receta, Comentario
 from django import forms
 from django.forms import ModelForm
